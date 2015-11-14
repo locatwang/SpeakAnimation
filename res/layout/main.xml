@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:RippleBackground="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+        >
+
+    <com.aking.speak.RippleBackground
+            android:id="@+id/ripple_real"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="bottom"
+            android:background="#F5F5F5"
+            RippleBackground:rb_color="#0099CC"
+            RippleBackground:rb_duration="2000"
+            RippleBackground:rb_radius="@dimen/ddiy30"
+            RippleBackground:rb_rippleAmount="1"
+            RippleBackground:rb_scale="3"
+            RippleBackground:rb_type="strokeRipple">
+
+
+        <com.aking.speak.RippleView
+                android:id="@+id/speak_image"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="hello"
+                android:src="@drawable/yy_speak"
+                RippleBackground:cb_color="#0099ff"
+                RippleBackground:cb_pressedRingWidth="60.0dp"/>
+
+    </com.aking.speak.RippleBackground>
+
+    <Button android:id="@+id/close" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="CLOSE"/>
+    <Button android:id="@+id/random" android:layout_alignParentRight="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RANDOM"/>
+</RelativeLayout>
+
